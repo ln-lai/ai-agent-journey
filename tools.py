@@ -1,4 +1,5 @@
 import json
+from memory import remember, recall, recall_all
 
 # ── 真正执行的 Python 函数 ──────────────────────────────
 def get_weather(city: str) -> str:
@@ -22,6 +23,43 @@ def calculate(expression: str) -> str:
 
 # ── 告诉 AI "有哪些工具可以用" 的描述 ─────────────────
 TOOLS = [
+    {
+        "type": "function",
+        "function": {
+            "name": "remember",
+            "description": "把一条重要信息存入长期记忆，下次重启也能记住",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "key":   {"type": "string", "description": "记忆的名称，例如：用户姓名"},
+                    "value": {"type": "string", "description": "记忆的内容，例如：小明"}
+                },
+                "required": ["key", "value"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "recall",
+            "description": "从长期记忆中查找某条信息",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "key": {"type": "string", "description": "要查找的记忆名称"}
+                },
+                "required": ["key"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "recall_all",
+            "description": "列出所有长期记忆",
+            "parameters": {"type": "object", "properties": {}}
+        }
+    },
     {
         "type": "function",
         "function": {
@@ -56,4 +94,7 @@ TOOLS = [
 TOOL_MAP = {
     "get_weather": get_weather,
     "calculate": calculate,
+    "remember": remember,
+    "recall": recall,
+    "recall_all": recall_all,
 }
