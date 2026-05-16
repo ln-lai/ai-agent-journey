@@ -3,4 +3,7 @@ memory.json
 __pycache__/
 *.pyc
 .DS_Store
-openai-agents-python/
+# 忽略整个 openai-agents-python（OpenAI 源码）
+openai-agents-python/*
+# 但捞回我自己写的练习代码
+!openai-agents-python/我的练习/
