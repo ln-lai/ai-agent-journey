@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent 学习地图</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">OpenAI Agents SDK</p>
+          <h1 id="page-title">Agent 学习地图</h1>
+          <p id="current-summary" class="summary"></p>
+        </div>
+        <div class="hero-panel" aria-label="当前进度">
+          <div class="ring" style="--percent: 27">
+            <span id="overall-percent">27%</span>
+          </div>
+          <div>
+            <p class="panel-label">当前任务</p>
+            <h2 id="current-title">Streaming Agent</h2>
+            <p id="updated-at" class="muted"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" id="metrics" aria-label="学习概览"></section>
+
+      <section class="layout">
+        <aside class="next-card" aria-labelledby="next-title">
+          <p class="eyebrow">Next</p>
+          <h2 id="next-title">下一步</h2>
+          <div id="next-task"></div>
+        </aside>
+
+        <section class="map" aria-labelledby="map-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Roadmap</p>
+              <h2 id="map-title">五阶段路线</h2>
+            </div>
+            <div class="legend" aria-label="状态图例">
+              <span><i class="dot done"></i>完成</span>
+              <span><i class="dot active"></i>进行中</span>
+              <span><i class="dot todo"></i>未开始</span>
+            </div>
+          </div>
+          <div id="phase-list" class="phase-list"></div>
+        </section>
+      </section>
+
+      <section class="log" aria-labelledby="log-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Log</p>
+            <h2 id="log-title">最近学习记录</h2>
+          </div>
+        </div>
+        <div id="recent-log" class="log-list"></div>
+      </section>
+    </main>
+
+    <script src="./progress-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
