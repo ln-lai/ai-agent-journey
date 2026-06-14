@@ -7,6 +7,38 @@ const learningProgress = {
     summary: "Streaming Agent 已完成。下一步练工具错误处理：工具报错时，Agent 如何接住错误并给用户一个稳的回答。",
     status: "in_progress",
   },
+  sprint: {
+    title: "两天加速计划",
+    summary: "目标不是把每个细节都磨完，而是先把第一轮主线跑通：工具错误处理、真实工具、agents-as-tools、judge/guardrails、小项目立项。",
+    targetDate: "2026-06-17",
+    pace: "每天 2 小时，高强度过主线，复盘只写最关键的 5 句话。",
+  },
+  tomorrowPlan: [
+    {
+      time: "0:00-0:20",
+      title: "复盘 Streaming",
+      goal: "用自己的话讲清 event、item、raw_response_event、message_output_item。",
+      output: "口头讲一遍，不新写长文。",
+    },
+    {
+      time: "0:20-1:05",
+      title: "Tool Error Agent",
+      goal: "做一个会失败的工具，让 Agent 学会接住错误并解释给用户。",
+      output: "02_tools/tool_error_agent.py",
+    },
+    {
+      time: "1:05-1:40",
+      title: "真实工具",
+      goal: "做一个本地文件读取工具，读取一小段笔记或 README，并让 Agent 总结。",
+      output: "02_tools/real_file_tool_agent.py",
+    },
+    {
+      time: "1:40-2:00",
+      title: "面试口径",
+      goal: "讲清工具是谁执行的、工具报错如何传回 Agent、docstring 为什么重要。",
+      output: "phase_2_summary.md 的 5 句话草稿。",
+    },
+  ],
   milestones: [
     {
       label: "已完成",
@@ -167,6 +199,11 @@ const learningProgress = {
     },
   ],
   recentLog: [
+    {
+      date: "2026-06-15",
+      title: "制定两天加速计划",
+      note: "明天 2 小时主攻 Tool Error Agent 和真实本地文件工具，后天推进 agents-as-tools、judge/guardrails 和项目立项。",
+    },
     {
       date: "2026-06-15",
       title: "完成 Streaming Agent",

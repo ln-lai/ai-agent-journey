@@ -58,6 +58,27 @@ function renderNextTask(data) {
   `;
 }
 
+function renderSprint(data) {
+  if (!data.sprint || !data.tomorrowPlan) return;
+
+  document.querySelector("#sprint-title").textContent = data.sprint.title;
+  document.querySelector("#sprint-meta").textContent = `${data.sprint.targetDate} · ${data.sprint.pace}`;
+  document.querySelector("#sprint-summary").textContent = data.sprint.summary;
+
+  const items = data.tomorrowPlan.map((item) => {
+    return `
+      <article class="plan-item">
+        <span class="plan-time">${item.time}</span>
+        <h3>${item.title}</h3>
+        <p>${item.goal}</p>
+        <span class="plan-output">产出：${item.output}</span>
+      </article>
+    `;
+  });
+
+  document.querySelector("#tomorrow-plan").innerHTML = items.join("");
+}
+
 function renderPhases(data) {
   const currentPhaseId = data.currentFocus.phaseId;
   const currentTaskId = data.currentFocus.taskId;
@@ -126,6 +147,7 @@ function renderDashboard(data) {
   document.querySelector(".ring").style.setProperty("--percent", overallProgress);
 
   renderMetrics(data, overallProgress);
+  renderSprint(data);
   renderNextTask(data);
   renderPhases(data);
   renderLog(data);

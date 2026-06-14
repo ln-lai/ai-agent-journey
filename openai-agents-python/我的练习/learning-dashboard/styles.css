@@ -98,6 +98,7 @@ h1 {
 }
 
 .hero-panel,
+.sprint,
 .next-card,
 .map,
 .log {
@@ -148,6 +149,62 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin: 18px 0 24px;
+}
+
+.sprint {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.sprint-summary {
+  max-width: 860px;
+  margin: -6px 0 18px;
+  color: var(--slate);
+  line-height: 1.65;
+}
+
+.plan-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.plan-item {
+  min-height: 164px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+}
+
+.plan-time {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: var(--amber-soft);
+  color: #7a4a00;
+  font-size: 0.82rem;
+  font-weight: 760;
+}
+
+.plan-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.06rem;
+}
+
+.plan-item p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.plan-output {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.86rem;
 }
 
 .metric {
@@ -405,6 +462,7 @@ h1 {
   .hero,
   .layout,
   .metrics,
+  .plan-list,
   .log-list {
     grid-template-columns: 1fr;
   }
@@ -426,6 +484,7 @@ h1 {
 
   .hero-copy,
   .hero-panel,
+  .sprint,
   .next-card,
   .map,
   .log {

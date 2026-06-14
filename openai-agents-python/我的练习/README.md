@@ -30,6 +30,30 @@
 3. `03_patterns/agents_as_tools_research_agent.py`
 4. `03_patterns/judge_code_review_agent.py`
 
+## 两天加速计划
+
+目标：先把第一轮主线跑通，不在每个练习里过度打磨。
+
+当前进度：`6/15`，整体约 `40%`。
+
+### 明天 2 小时任务
+
+| 时间 | 任务 | 产出 |
+| --- | --- | --- |
+| 0:00-0:20 | 口头复盘 Streaming | 能讲清 `event`、`item`、`raw_response_event`、`message_output_item` |
+| 0:20-1:05 | Tool Error Agent | `02_tools/tool_error_agent.py` |
+| 1:05-1:40 | 真实本地文件工具 | `02_tools/real_file_tool_agent.py` |
+| 1:40-2:00 | 阶段 2 面试口径 | `00_notes/phase_2_summary.md` 的 5 句话草稿 |
+
+### 后天 2 小时任务
+
+| 时间 | 任务 | 产出 |
+| --- | --- | --- |
+| 0:00-0:45 | Agents as tools | `03_patterns/agents_as_tools_research_agent.py` |
+| 0:45-1:25 | Judge + Guardrails | `03_patterns/judge_code_review_agent.py` |
+| 1:25-1:50 | 小项目立项 | `05_project/README.md` |
+| 1:50-2:00 | 更新学习地图 | 网页进度和 README 同步 |
+
 ## 文件夹说明
 
 ```text
